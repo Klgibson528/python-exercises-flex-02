@@ -47,21 +47,21 @@
 # far = cel * 1.8 + 32
 # print str(cel) + " degrees celsius is equal to "+ str(far) +" degrees fahrenheit."
 
-# #Exercise 7 - Tip Calculator
-# total = int(input("Total bill amount? "))
-# service = raw_input("Was the service good, fair, or bad? ")
-# service = service.lower()
-# if service == "good":
-#   tip = .20 * total
-#   print "Since your service was good you should leave a 20% tip which would be " + "$" + str("%.2f"%tip)+"."
-# elif service == "fair":
-#   tip = .15 * total
-#   print "Since your service was fair you should leave a 15% tip which would be " + "$" + str("%.2f"%tip)+"."
-# elif service == "bad":
-#   tip = .10 * total
-#   print "Since your service was bad you should leave a 10% tip which would be " + "$" + str("%.2f"%tip)+"."
-# else:
-#   print "Please rate your service as 'Good', 'Fair' or 'Bad'"
+#Exercise 7 - Tip Calculator
+total = int(input("Total bill amount? "))
+service = raw_input("Was the service good, fair, or bad? ")
+service = service.lower()
+if service == "good":
+  tip = .20 * total
+  print "Since your service was good you should leave a 20% tip which would be " + "$" + str("%.2f"%tip)+"."
+elif service == "fair":
+  tip = .15 * total
+  print "Since your service was fair you should leave a 15% tip which would be " + "$" + str("%.2f"%tip)+"."
+elif service == "bad":
+  tip = .10 * total
+  print "Since your service was bad you should leave a 10% tip which would be " + "$" + str("%.2f"%tip)+"."
+else:
+  print "Please rate your service as 'Good', 'Fair' or 'Bad'"
 # #I want to figure out how to make it loop back if they enter something other than good, bad, or fair
 
 # # #Exercise 8 - Tip Calculator 2
@@ -87,4 +87,16 @@
 #   count += 1
 #   print count
 
-#Exercise 10 - How many coins?
+# #Exercise 10 - How many coins?
+# coins = 0 
+# more = raw_input("Would you like a coin? ")
+# while more == "yes":
+#     coins += 1
+#     print "You have " + str(coins) + " coins."
+#     more = raw_input("Would you like another coin? ")
+
+# if coins == 0:
+#     print "You have no coins!"
+# elif coins > 0:
+#     print "You are leaving with " + str(coins) + " coins. Goodbye."
+
