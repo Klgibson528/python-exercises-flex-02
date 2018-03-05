@@ -3,6 +3,7 @@
 # print "Hello, " + name + "!"
   
 # #Exercise 2 - HELLO, YOU!
+# name = raw_input("What is your name? ")
 # new_string = "Hello, "+ name + "!"
 # print new_string.upper()
 # print "YOUR NAME HAS " + str(len(name)) + " IN IT!"
@@ -63,7 +64,21 @@
 #   print "Please rate your service as 'Good', 'Fair' or 'Bad'"
 # #I want to figure out how to make it loop back if they enter something other than good, bad, or fair
 
-#Exercise 8 - Tip Calculator 2
+# # #Exercise 8 - Tip Calculator 2
+# total = int(input("Total bill amount? "))
+# split = int(input("How many ways would you like to split the bill? "))
+# total = total/split
+# service = raw_input("Was the service good, fair, or bad? ")
+# service = service.lower()
+# if service == "good":
+#   tip = (.20 * total)+total
+#   print "With a 20% tip you will each pay " + "$" + str("%.2f"%tip)+"."
+# elif service == "fair":
+#   tip = (.15 * total)+total
+#   print "With a 15% tip you will each pay " + "$" + str("%.2f"%tip)+"."
+# elif service == "bad":
+#   tip = (.10 * total)+total
+#   print "With a 10% tip you will each pay " + "$" + str("%.2f"%tip)+"."
 
 
 # #Exercise 9 - 1 to 10
