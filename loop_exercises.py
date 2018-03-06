@@ -32,6 +32,14 @@
 #     count += 1
 
 # Print a Box
+count = 0 
+h = int(input("How tall is your square? "))
+w = int(input("How wide is your square?"))
+print "*"*w
+while count < h-2:
+    print "*" + (" "*(w-2)) + "*"
+    count += 1
+print "*"*w
 
 # # Print a Triangle
 # count = 1
@@ -39,9 +47,16 @@
 #     print ("*" * count).center(15)
 #     count += 2
 
-# Print a Triangle - Height
-height = int(input("How tall is your triangle? "))
-count = 1
-while count < height*2:
-    print ("*" * count).center(height*2-1)
-    count += 2
+# # Print a Triangle - Height
+# height = int(input("How tall is your triangle? "))
+# count = 1
+# while count < height*2:
+#     print ("*" * count).center(height*2-1)
+#     count += 2
+
+# # Multiplication Table
+# n = 1
+# while n < 11:
+#     print "1 x "+ str(n) + " = " + str(1*n)
+#     n += 1
+# # not sure how to move to next set
