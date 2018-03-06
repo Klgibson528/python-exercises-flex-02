@@ -31,15 +31,15 @@
 #     print "*" * big
 #     count += 1
 
-# Print a Box
-count = 0 
-h = int(input("How tall is your square? "))
-w = int(input("How wide is your square?"))
-print "*"*w
-while count < h-2:
-    print "*" + (" "*(w-2)) + "*"
-    count += 1
-print "*"*w
+# # Print a Box
+# count = 0 
+# h = int(input("How tall is your square? "))
+# w = int(input("How wide is your square?"))
+# print "*"*w
+# while count < h-2:
+#     print "*" + (" "*(w-2)) + "*"
+#     count += 1
+# print "*"*w
 
 # # Print a Triangle
 # count = 1
@@ -55,8 +55,8 @@ print "*"*w
 #     count += 2
 
 # # Multiplication Table
-# n = 1
-# while n < 11:
-#     print "1 x "+ str(n) + " = " + str(1*n)
-#     n += 1
-# # not sure how to move to next set
+# for i in range(1, 11):
+#     n = 1
+#     while n < 11:
+#         print str(i) + " x "+ str(n) + " = " + str(i*n)
+#         n += 1
