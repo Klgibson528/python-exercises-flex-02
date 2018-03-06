@@ -24,9 +24,24 @@
 #     print "*" * 5
 #     count += 1
 
-# How big is the square?
-count = 0
-big = int(input("How big is the square? "))
-while count < big:
-    print "*" * big
-    count += 1
+# # How big is the square?
+# count = 0
+# big = int(input("How big is the square? "))
+# while count < big:
+#     print "*" * big
+#     count += 1
+
+# Print a Box
+
+# # Print a Triangle
+# count = 1
+# while count < 16:
+#     print ("*" * count).center(15)
+#     count += 2
+
+# Print a Triangle - Height
+height = int(input("How tall is your triangle? "))
+count = 1
+while count < height*2:
+    print ("*" * count).center(height*2-1)
+    count += 2
