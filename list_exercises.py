@@ -44,13 +44,25 @@
 #         print i
 
 # Postive number II
-import random
-list_num = []
-new_list = []
-for x in range(10):
-    list_num.append(random.randint(-100, 100))
-print list_num
-for i in list_num:
-    if i > 0:
-        new_list.append(i)
-print new_list
+# import random
+# list_num = []
+# new_list = []
+# for x in range(10):
+#     list_num.append(random.randint(-100, 100))
+# print list_num
+# for i in list_num:
+#     if i > 0:
+#         new_list.append(i)
+# print new_list
+
+# # Multiply list
+# import random
+# list_num = []
+# new_list = []
+# for x in range(10):
+#     list_num.append(random.randint(0, 100))
+# print list_num
+# for i in list_num:
+#     i = i * 2
+#     new_list.append(i)
+# print new_list
