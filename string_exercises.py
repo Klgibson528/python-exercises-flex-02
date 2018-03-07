@@ -43,8 +43,9 @@
 # print leet
 # # Could you use a dictionary for this?
 
-# Long-long vowels
-word = raw_input("Give me a word ")
-long_word=""
-for i in word:
+# # Long-long vowels
+# word = input("Give me a word ")
+# long_word=""
+# for i in word:
     
+# Ceasar Cipher
