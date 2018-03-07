@@ -67,21 +67,21 @@
 #     new_list.append(i)
 # print new_list
 
-# # Multiply vectors
-# import random
-# list1_num = []
-# list2_num = []
-# multiplied = []
-# ind = 0
-# for x in range(3):
-#     list1_num.append(random.randint(1, 100))
-# for x in range(3):
-#     list2_num.append(random.randint(1, 100))
-# print list1_num
-# print list2_num
-# for i in list1_num:
-#     m = i * list2_num[ind]
-#     multiplied.append(m)
-#     ind += 1
-# print multiplied
-        
+# Multiply vectors
+import random
+list1_num = []
+list2_num = []
+multiplied = []
+ind = 0
+for x in range(3):
+    list1_num.append(random.randint(1, 100))
+for x in range(3):
+    list2_num.append(random.randint(1, 100))
+print list1_num
+print list2_num
+for i in list1_num:
+    m = i * list2_num[ind]
+    multiplied.append(m)
+    ind += 1
+print multiplied
+
