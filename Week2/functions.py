@@ -1,4 +1,4 @@
-# # Functions
+# # Hello
 # def hello(name):
 #     print ("Hello {}".format(name))
 # hello(input("What is your name? "))
@@ -21,23 +21,23 @@
 # pyplot.savefig('Number1.png')
 # pyplot.close()
 
-# # y = x^2
-# import matplotlib
-# matplotlib.use("Agg")
+# y = x^2
+import matplotlib
+matplotlib.use("Agg")
 
-# from matplotlib import pyplot
+from matplotlib import pyplot
 
-# def f(x):
-#     return x*x
+def f(x):
+    return x*x
 
-# xs = list(range(-100, 101))
-# ys = []
-# for x in xs:
-#     ys.append(f(x))
+xs = list(range(-100, 101))
+ys = []
+for x in xs:
+    ys.append(f(x))
 
-# pyplot.plot(xs, ys)
-# pyplot.savefig('Number2.png')
-# pyplot.close()
+pyplot.plot(xs, ys)
+pyplot.savefig('Number2.png')
+pyplot.close()
 
 # # Odd or Even
 # import matplotlib
@@ -104,9 +104,28 @@
 # pyplot.savefig('Number5.png')
 # pyplot.close()
 
+# # Degree conversion
+# import matplotlib
+# matplotlib.use("Agg")
 
+# from matplotlib import pyplot
 
-# #def play():
+# def f(x):
+#     return x* 1.8 + 32
+
+# xs = list(range(0, 101))
+# ys = []
+# for x in xs:
+#     ys.append(f(x))
+
+# pyplot.plot(xs, ys)
+# pyplot.savefig('Number6.png')
+# pyplot.close()
+    
+    
+
+# # Play again?
+# def play():
 #     ans = input("Would you like to play again? Y or N ")
 #     ans = ans.upper()
 #     if ans == "Y":
@@ -115,4 +134,18 @@
 #         return (False) 
 # play()
 
-# Play again? Again
+# # Play again? Again
+# def play():
+#     while True:
+#         ans = input("Would you like to play again? Y or N ")
+#         ans = ans.upper()
+#         if ans == "Y":
+#             return (True)
+#             break
+#         elif ans == "N":
+#             return (False)
+#             break
+#         else:
+#             print ("Invalid input")
+            
+# play()
