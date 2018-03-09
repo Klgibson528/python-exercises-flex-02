@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "85b6dfa1e01e9fb92ec95fa5f30ba35bd92c5d11fee6df7a09b9c839a20d85f2"
+            "sha256": "bb8a9350c420753ad87afccace75ee3cec8b753533220f7ae5630ecd1668d4b4"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",

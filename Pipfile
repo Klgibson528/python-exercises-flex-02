@@ -9,6 +9,7 @@ url = "https://pypi.python.org/simple"
 
 ipython = "*"
 matplotlib = "*"
+numpy = "*"
 
 
 [dev-packages]

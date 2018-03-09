@@ -60,7 +60,53 @@
 # pyplot.savefig('Number3.png')
 # pyplot.close()
 
-# def play():
+# #Sine
+# import math
+# from math import sin
+
+# import matplotlib
+# matplotlib.use("Agg")
+
+# from matplotlib import pyplot
+
+# def f(x):
+#     return sin(x)
+
+# xs = list(range(-5, 6))
+# ys = []
+# for x in xs:
+#     ys.append(f(x))
+
+# pyplot.plot(xs, ys)
+# pyplot.savefig('Number4.png')
+# pyplot.close()
+
+# #Sine 2
+# import math
+# from math import sin
+
+# import numpy 
+# from numpy import arange
+
+# import matplotlib
+# matplotlib.use("Agg")
+# from matplotlib import pyplot
+
+# def f(x):
+#     return sin(x)
+
+# xs = list(arange(-5, 6, 0.1))
+# ys = []
+# for x in xs:
+#     ys.append(f(x))
+
+# pyplot.plot(xs, ys)
+# pyplot.savefig('Number5.png')
+# pyplot.close()
+
+
+
+# #def play():
 #     ans = input("Would you like to play again? Y or N ")
 #     ans = ans.upper()
 #     if ans == "Y":
@@ -69,4 +115,4 @@
 #         return (False) 
 # play()
 
-
+# Play again? Again
