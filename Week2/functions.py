@@ -21,23 +21,23 @@
 # pyplot.savefig('Number1.png')
 # pyplot.close()
 
-# y = x^2
-import matplotlib
-matplotlib.use("Agg")
+# # y = x^2
+# import matplotlib
+# matplotlib.use("Agg")
 
-from matplotlib import pyplot
+# from matplotlib import pyplot
 
-def f(x):
-    return x*x
+# def f(x):
+#     return x*x
 
-xs = list(range(-100, 101))
-ys = []
-for x in xs:
-    ys.append(f(x))
+# xs = list(range(-100, 101))
+# ys = []
+# for x in xs:
+#     ys.append(f(x))
 
-pyplot.plot(xs, ys)
-pyplot.savefig('Number2.png')
-pyplot.close()
+# pyplot.plot(xs, ys)
+# pyplot.savefig('Number2.png')
+# pyplot.close()
 
 # # Odd or Even
 # import matplotlib
