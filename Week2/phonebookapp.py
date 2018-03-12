@@ -59,8 +59,10 @@ def intro():
             save_entries()
         elif ans == 6:
             load_entries()
-        else:
+        elif:
             print ("Thank you for using the phonebook!")
             break
+        else: 
+            print ("Please enter a number 1-7")
 
 intro()
