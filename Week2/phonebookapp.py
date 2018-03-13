@@ -20,9 +20,7 @@ def intro():
     2. Set an entry
     3. Delete an entry
     4. List all entries
-    5. Save entries
-    6. Restore saved entries
-    7. Quit""")
+    5. Quit""")
     #use pickle to save data 
     #use pickle to call saved data
         ans = int(input("What would you like to do? Please enter a number. "))
@@ -56,13 +54,9 @@ def intro():
             for key, value in book.items():
                 print ('{}: {}'.format(key, value))
         elif ans == 5:
-            save_entries()
-        elif ans == 6:
-            load_entries()
-        elif:
             print ("Thank you for using the phonebook!")
             break
         else: 
-            print ("Please enter a number 1-7")
+            print ("Please enter a number 1-5")
 
 intro()
