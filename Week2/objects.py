@@ -9,7 +9,7 @@
 
 #     def greet(self, other_person):
 #         print('Hello {}, I am {}!'.format(other_person.name, self.name))
-        
+   
 #     def contact(self):
 #         return ('Name: {}\nEmail: {}\nPhone: {}').format(self.name, self.email, self.phone)
     
@@ -18,7 +18,8 @@
         
 #     def num_friends(self):
 #         print (len(self.friends))
-    
+#     def __str__(self):
+#         return 'Name: {}\nEmail: {}\nPhone: {}'.format(self.name, self.email, self.phone)
 
 # sonny = Person('Sonny', 'sonny@hotmail.com', '483-485-4948')
 # jordan = Person('Jordan', 'jordan@aol.com', '495-586-3456')
@@ -32,6 +33,7 @@
 # jordan.add_friend(sonny)
 # jordan.num_friends()
 
+# print(jordan)
 
 # # Make your own class
 # class Vehicle:
