@@ -8,7 +8,7 @@ class Character:
    
     def attack(self, opponent):
         roll = random.randint(1, 20)
-        print(roll)
+        print('{} rolled a {}'.format(self.name, roll))
         if roll > 5 and roll < 17:
             print("{} delt {} damage to the {}".format(self.name, self.dmg, opponent.name))
             opponent.hp -= self.dmg
@@ -29,6 +29,7 @@ class Character:
         
 class Hero(Character):
     pass
+
         
     
 class Goblin(Character):
@@ -38,6 +39,7 @@ hero = Hero('Hero', 10, 5)
 goblin =Goblin('Goblin', 6, 2)
 
 def main():
+    
     while goblin.alive() and hero.alive():
         hero.print_status()
         goblin.print_status()

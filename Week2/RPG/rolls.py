@@ -15,3 +15,13 @@ def dm_roll():
     print(enemy)
 
 dm_roll()
+
+def player_roll():
+    roll = random.randint(1, 20)
+    print(roll)
+    if roll > 5 and roll < 17:
+        attack()
+    elif roll >= 17:
+        return attack() *2
+    else: 
+        print('You missed!')
