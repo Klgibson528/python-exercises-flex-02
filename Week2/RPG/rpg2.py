@@ -1,4 +1,5 @@
 import random
+
 class Character:
     def __init__(self, name, hp, dmg):
         self.name = name
@@ -6,16 +7,24 @@ class Character:
         self.dmg = dmg
    
     def attack(self, opponent):
-        print("{} delt {} damage to the {}".format(self.name, self.dmg, opponent.name))
-        if opponent.name == 'Goblin':
-            opponent.hp -= self.dmg*random.randint(1, 6)
-        else:
-            opponent.hp -= self.dmg*random.randint(1, 3)
+        roll = random.randint(1, 20)
+        print(roll)
+        if roll > 5 and roll < 17:
+            print("{} delt {} damage to the {}".format(self.name, self.dmg, opponent.name))
+            opponent.hp -= self.dmg
+        elif roll >= 17:
+            print('{} crits and deals double damage!'.format(self.name))
+            opponent.hp -= self.dmg * 2   
+        else: 
+            print('You missed!')
+        
+        
     def alive(self):
         return self.hp > 0
         
     def print_status(self):
         print("{} has {} hit points left!".format(self.name, self.hp))
+        
         
         
 class Hero(Character):
@@ -25,8 +34,8 @@ class Hero(Character):
 class Goblin(Character):
     pass
     
-hero = Hero('Hero', 10, 1)
-goblin =Goblin('Goblin', 6, 1)
+hero = Hero('Hero', 10, 5)
+goblin =Goblin('Goblin', 6, 2)
 
 def main():
     while goblin.alive() and hero.alive():
