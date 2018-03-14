@@ -28,16 +28,45 @@ class Character:
         
         
 class Hero(Character):
-    pass
+    def __init__(self, name, hp, weapon, coins):
+        self.name = name
+        self.hp = hp
+        self.weapon = weapon
+        self.coins = coins
 
         
     
-class Goblin(Character):
-    pass
-    
-hero = Hero('Hero', 10, 5)
-goblin =Goblin('Goblin', 6, 2)
+class Monster(Character):
+    def __init__(self, name, hp, dmg):
+        self.name = name
+        self.hp = hp
+        self.dmg = dmg
+#Heros
+fighter = Hero('Fighter', 15, 'Sword', 20)
+wizard = Hero('Wizard', 15, 'Magic Missle', 20)
+cleric = Hero('Cleric', 10, 'Cure wounds', 10)
+rouge = Hero('Rouge', 10, 'Dagger', 10)
 
+#Monsters
+goblin = Monster('Goblin', 6, 2)
+zombie = Monster('Zombie', 8, 3)
+ogre = Monster('Ogre', 15, 5)
+dragon = Monster('Dragon', 1000000, 10)
+
+def setup():
+    print("""
+Welcome, Adventurer!  
+Thank you for coming to rescue our town.    
+There are many monsters to fight, so let's begin!""")
+    spec = input('Are your a Fighter, Cleric, Wizard or a Rouge? ')
+    spec = spec.lower()
+    
+    if spec == 'fighter':
+    elif spec == 'cleric':
+    elif spec == 'wizard':
+    elif spec == 'rouge':
+        
+        
 def main():
     
     while goblin.alive() and hero.alive():
@@ -68,4 +97,5 @@ def main():
             if hero.alive() == False:
                 print("You are dead.")
     
+setup()
 main()

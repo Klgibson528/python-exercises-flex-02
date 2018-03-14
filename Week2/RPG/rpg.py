@@ -2,12 +2,14 @@ def setup():
     print("""
 Welcome, Adventurer!  
 Thank you for coming to rescue our town.    
-There are many monsters to fight, so let's begin!"""
-    spec = input('Are your a Fighter, Cleric, or a Rouge? ')
+There are many monsters to fight, so let's begin!""")
+    spec = input('Are your a Fighter, Cleric, Wizard or a Rouge? ')
     spec = spec.lower()
-    if spec == 'fighter':
-    elif spec == 'cleric':
-    elif spec == 'rouge':
+    # if spec == 'fighter':
+        
+    # elif spec == 'cleric':
+    # elif spec == 'wizard':
+    # elif spec == 'rouge':
 
 setup()
 
