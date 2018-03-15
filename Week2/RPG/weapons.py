@@ -5,6 +5,6 @@ class Weapons:
         self.max_dmg = max_dmg
 
 sword = Weapons('Sword', 1, 8)
-magic = Weapons('Magic Missle', 1, 6)
+magic = Weapons('Magic Missle', 1, 8)
 dagger = Weapons('Dagger', 1, 4)
 heal = Weapons('Cure wounds', 1, 8)

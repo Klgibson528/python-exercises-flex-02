@@ -27,20 +27,10 @@ class Character:
         
         
         
-class Hero(Character):
-    def __init__(self, name, hp, weapon, coins):
-        self.name = name
-        self.hp = hp
-        self.weapon = weapon
-        self.coins = coins
+
 
         
     
-class Monster(Character):
-    def __init__(self, name, hp, dmg):
-        self.name = name
-        self.hp = hp
-        self.dmg = dmg
 #Heros
 fighter = Hero('Fighter', 15, 'Sword', 20)
 wizard = Hero('Wizard', 15, 'Magic Missle', 20)
@@ -61,10 +51,10 @@ There are many monsters to fight, so let's begin!""")
     spec = input('Are your a Fighter, Cleric, Wizard or a Rouge? ')
     spec = spec.lower()
     
-    if spec == 'fighter':
-    elif spec == 'cleric':
-    elif spec == 'wizard':
-    elif spec == 'rouge':
+    # if spec == 'fighter':
+    # elif spec == 'cleric':
+    # elif spec == 'wizard':
+    # elif spec == 'rouge':
         
         
 def main():
