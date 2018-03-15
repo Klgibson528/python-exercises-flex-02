@@ -31,17 +31,9 @@ class Character:
 
         
     
-#Heros
-fighter = Hero('Fighter', 15, 'Sword', 20)
-wizard = Hero('Wizard', 15, 'Magic Missle', 20)
-cleric = Hero('Cleric', 10, 'Cure wounds', 10)
-rouge = Hero('Rouge', 10, 'Dagger', 10)
 
-#Monsters
-goblin = Monster('Goblin', 6, 2)
-zombie = Monster('Zombie', 8, 3)
-ogre = Monster('Ogre', 15, 5)
-dragon = Monster('Dragon', 1000000, 10)
+
+
 
 def setup():
     print("""
@@ -59,19 +51,19 @@ There are many monsters to fight, so let's begin!""")
         
 def main():
     
-    while goblin.alive() and hero.alive():
+    while opponent.alive() and hero.alive():
         hero.print_status()
-        goblin.print_status()
+        opponent.print_status()
         print("What do you want to do?")
-        print("1. fight goblin")
-        print("2. do nothing")
-        print("3. flee")
+        print("1. Fight {}".format(opponent))
+        print("2. Do nothing")
+        print("3. Flee")
         print("> ", end=' ')
         raw_input = input()
         if raw_input == "1":
-            # Hero attacks goblin
-            hero.attack(goblin)
-            if goblin.alive() == False:
+            # Hero attacks opponent
+            hero.attack(opponent)
+            if opponent.alive() == False:
                 print("Victory!!!")
         elif raw_input == "2":
             pass
@@ -81,9 +73,9 @@ def main():
         else:
             print("Invalid input {}".format(raw_input))
 
-        if goblin.alive():
-            # Goblin attacks hero
-            goblin.attack(hero)
+        if opponent.alive():
+            # opponent attacks hero
+            opponent.attack(hero)
             if hero.alive() == False:
                 print("You are dead.")
     

@@ -2,16 +2,16 @@ import random
 def dm_roll():
     roll = random.randint(1, 20)
     print(roll)
-    enemy = ""
+    opponent = ""
     if roll > 0 and roll <= 10:
-        enemy = 'Goblin'
+        opponent = 'Goblin'
     elif roll > 10 and roll <= 16:
-        enemy = 'Zombie'
+        opponent = 'Zombie'
     elif roll > 16 and roll <= 19:
-        enemy = 'Ogre'
+        opponent = 'Ogre'
     else:
-        enemy = 'Dragon'
+        opponent = 'Dragon'
     
-    print(enemy)
+    print(opponent)
 
 dm_roll()
