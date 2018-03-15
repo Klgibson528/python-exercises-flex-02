@@ -26,15 +26,6 @@ class Character:
         print("{} has {} hit points left!".format(self.name, self.hp))
         
         
-        
-
-
-        
-    
-
-
-
-
 def setup():
     print("""
 Welcome, Adventurer!  
@@ -43,10 +34,10 @@ There are many monsters to fight, so let's begin!""")
     spec = input('Are your a Fighter, Cleric, Wizard or a Rouge? ')
     spec = spec.lower()
     
-    # if spec == 'fighter':
-    # elif spec == 'cleric':
-    # elif spec == 'wizard':
-    # elif spec == 'rouge':
+    if spec == 'fighter':
+    elif spec == 'cleric':
+    elif spec == 'wizard':
+    elif spec == 'rouge':
         
         
 def main():
