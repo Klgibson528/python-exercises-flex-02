@@ -1,4 +1,4 @@
-class Monster:
+class Monster(Character):
     def __init__(self, name, hp, dmg):
         self.name = name
         self.hp = hp
