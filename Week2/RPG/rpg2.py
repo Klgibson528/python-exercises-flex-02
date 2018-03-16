@@ -9,10 +9,10 @@ class Character:
     def attack(self, opponent):
         roll = random.randint(1, 20)
         print('{} rolled a {}'.format(self.name, roll))
-        if roll > 5 and roll < 17:
-            print("{} delt {} damage to the {}".format(self.name, self.dmg, opponent.name))
+        if roll > opponent.ac:
+            print("{} delt {} damage to the {}".format(self.name, str(self.dmg * 2), opponent.name))
             opponent.hp -= self.dmg
-        elif roll >= 17:
+        elif roll > opponent.ac and roll >= 17:
             print('{} crits and deals double damage!'.format(self.name))
             opponent.hp -= self.dmg * 2   
         else: 
@@ -25,10 +25,12 @@ class Character:
         print("{} has {} hit points left!".format(self.name, self.hp))
         
 class Monster(Character):
-    def __init__(self, name, hp, dmg):
+    def __init__(self, name, hp, ac, dmg, bounty):
         self.name = name
         self.hp = hp
+        self.ac = ac
         self.dmg = dmg
+        self.bounty = bounty
 
 class Hero(Character):
     def __init__(self, name, hp, ac, dmg, coins):
@@ -62,13 +64,13 @@ def dm_roll():
     roll = random.randint(1, 20)
    
     if roll > 0 and roll <= 10:
-        opponent = Monster('Goblin', 6, 2)
+        opponent = Monster('Goblin', 6, 10, 2, 1)
     elif roll > 10 and roll <= 16:
-        opponent = Monster('Zombie', 8, 3)
+        opponent = Monster('Zombie', 8, 12, 3, 3)
     elif roll > 16 and roll <= 19:
-        opponent = Monster('Ogre', 15, 5)
+        opponent = Monster('Ogre', 15, 15, 5, 5)
     else:
-        opponent = Monster('Dragon', 1000000, 10)
+        opponent = Monster('Dragon', 1000000, 20, 10, 100)
     print("You have run into a {}!".format(opponent.name))
     return opponent
     
@@ -89,10 +91,20 @@ def fight():
             hero.attack(opponent)
             if opponent.alive() == False:
                 print("Victory!!!")
+                print("You collect the bounty for the {}, which is {} coins.".format(opponent.name, opponent.bounty))
+                hero.coins += opponent.bounty
+                print("You now have {} coins!".format(hero.coins))
         elif raw_input == "2":
             pass
         elif raw_input == "3":
             print("Run awaaaaaaaayyyy")
+            loss = random.randint(1,5)
+            print("As you run away you drop {} coins.".format(loss))
+            hero.coins -= loss
+            if hero.coins <= 0:
+                print ("You have no more coins")
+            else:
+                print ("You now have {} coins.".format(hero.coins))
             break
         else:
             print("Invalid input {}".format(raw_input))
@@ -102,7 +114,19 @@ def fight():
             opponent.attack(hero)
             if hero.alive() == False:
                 print("You are dead.")
-    
+
+def cont():
+    ans = int(input("""Would you like to: 
+1. Continue adventuring
+2. Go to the store
+3. Go home"""))
+    if ans == 1:
+        fight()
+    elif ans == 2:
+        store()
+    else:
+        print("Thank you for your help!")
+        
 
 if __name__ == "__main__":
   hero = setup()
