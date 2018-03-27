@@ -159,7 +159,7 @@ def dm_roll():
 
 
 def fight():
-
+    opponent = dm_roll()
     while opponent.alive() and hero.alive():
         hero.print_status()
         opponent.print_status()
@@ -222,3 +222,4 @@ if __name__ == "__main__":
     opponent = dm_roll()
     fight()
     store = cont()
+    cont()
