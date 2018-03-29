@@ -125,7 +125,7 @@ def setup():
 Welcome, Adventurer!  
 Thank you for coming to rescue our town.    
 There are many monsters to fight, so let's begin!""")
-    spec = input('Are your a Fighter, Cleric, Wizard or a Rouge? ')
+    spec = input('Are your a Fighter, Cleric, Wizard or a Rogue? ')
     spec = spec.lower()
 
     if spec == 'fighter':
@@ -135,7 +135,7 @@ There are many monsters to fight, so let's begin!""")
     elif spec == 'wizard':
         hero = Hero('Wizard', 15, 10, 8, 0, 20)
     elif spec == 'rouge':
-        hero = Hero('Rouge', 10, 16, 8, 0, 10)
+        hero = Hero('Rogue', 10, 16, 8, 0, 10)
     else:
         print("That's not an option!")
         setup()
